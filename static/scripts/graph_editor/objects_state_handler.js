@@ -89,6 +89,12 @@ export class ObjectsStateHandler {
         }
     }
 
+    shiftObjectsBy(vector) {
+        this.objects.forEach(object => {
+            object.setCoordinates(object.getCenter().add(vector));
+        });
+    }
+
     deleteObject(object) {
         this.objects.delete(object.id);
         this.group.removeChild(object.object);

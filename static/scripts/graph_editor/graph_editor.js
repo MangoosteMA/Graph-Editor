@@ -262,6 +262,7 @@ export class GraphEditor {
 
     shiftNodesBy(vector) {
         this.nodesStateHandler.shiftNodesBy(vector);
+        this.objectsStateHandler.shiftObjectsBy(vector);
         this.renderEdgesAndObjects(true);
     }
 
